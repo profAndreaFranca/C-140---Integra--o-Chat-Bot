@@ -11,6 +11,7 @@ predicted_emotion_img_url=""
 def index():
     entries = show_entry()
     return render_template("index.html", entries=entries)
+    # return render_template("index.html")
  
 @app.route('/predict-emotion', methods=["POST"])
 def predict_emotion():
@@ -59,6 +60,12 @@ def save_entry():
     return jsonify("Success")
 
 #Escreva a API aqui
+@app.route("/bot-response", methods=["POST"])
+def bot():
+    user_input = request.json.get("user_input")
+    joaozinho = bot_response(user_input)
+    response = {"bot_response": joaozinho}
+    return jsonify(response)
 
 
     # Obtenha a entrada do usuário

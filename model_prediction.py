@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-import tensorflow.keras
+import tensorflow
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
@@ -30,7 +30,7 @@ tokenizer.fit_on_texts(training_sentences)
 emo_code_url = {
     "vazio": [0, "./static/assets/emoticons/Empty.png"],
     "tristeza": [1,"./static/assets/emoticons/Sadness.png" ],
-    "entusiasmo": [2, "./static/assets/emoticons/Enthusiasm.png"],
+    "entusiasmo": [2, "./static/assets/emoticons/Enthusiastic.png"],
     "neutro": [3, "./static/assets/emoticons/Neutral.png"],
     "preocupacao": [4, "./static/assets/emoticons/Worry.png"],
     "surpresa": [5, "./static/assets/emoticons/Surprise.png"],
