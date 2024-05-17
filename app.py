@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request, jsonify
-from model_prediction import * 
-from predict_response import *
+from model_prediction import show_entry, predict
+from predict_response import bot_response
  
 app = Flask(__name__)
 

@@ -1,6 +1,7 @@
 # Biblioteca de pré-processamento de dados de texto
 import nltk
-
+nltk.download('punkt')
+nltk.download('wordnet')
 from nltk.stem import PorterStemmer
 stemmer = PorterStemmer()
 
